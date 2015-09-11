@@ -15,7 +15,7 @@ $(document).ready(function() {
     var user_new_word_form = String($("input#newWord").val());
     var result = wordToFind(user_phrase_form, user_old_word_form, user_new_word_form);
 
-
+//Show results of phrase with new words included:
     $(".result").text(result);
     $("#result").show();
     event.preventDefault();
