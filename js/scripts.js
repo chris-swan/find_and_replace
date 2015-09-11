@@ -1,7 +1,7 @@
-var wordToFind = function(userPhrase, oldWord) {
+var wordToFind = function(userPhrase, oldWord, newWord) {
 
   var words = userPhrase.split(" ");
-  var newWord;
+  debugger;
   var newWords = [];
   words.forEach(function(words) {
     //var wordStatic = word.slice();
@@ -22,8 +22,8 @@ var wordToFind = function(userPhrase, oldWord) {
 }
 //
 // $(document).ready(function() {
-//   $("form#pig_latin").submit(function(event) {
-//     var user_input_form = String($("input#user_input").val());
+//   $("form#find_and_replace").submit(function(event) {
+//     var user_input_form = String($("input#user_phrase").val());
 //     var result = findWord(user_input_form);
 //
 //     $(".result").text(result);
