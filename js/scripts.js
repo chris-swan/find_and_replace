@@ -1,10 +1,9 @@
 var wordToFind = function(userPhrase, oldWord, newWord) {
 
-
-  //Make phrase lower case:
+  //Make phrase to lower case:
   var lowerCasePhrase = userPhrase.toLowerCase();
 
-  //function to replace old words in phrase with new, while also making lower case to ensure all words are caught:
+  //replace old word(s) in phrase with new while also makeing all lower case to ensure all words are caught regardless of case:
   var result = lowerCasePhrase.replace(oldWord.toLowerCase(), newWord.toLowerCase());
   return result;
 }
@@ -16,8 +15,9 @@ $(document).ready(function() {
     var user_new_word_form = String($("input#newWord").val());
     var result = wordToFind(user_phrase_form, user_old_word_form, user_new_word_form);
 
-    $(".result").text(result);
 
+    $(".result").text(result);
+    $("#result").show();
     event.preventDefault();
 
   });
