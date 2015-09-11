@@ -1,5 +1,6 @@
 <html>
   <head>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
     <title>Find And Replace</title>
@@ -8,21 +9,23 @@
     <h1>Find And Replace</h1>
     <h2>Enter a phrase, followed by the word you want replaced, and then the new word:</h2>
 
-    <form id="wordToFind">
+    <form id="ReplaceWord">
         <div class="form-group">
           <label for="userPhrase">Enter the phrase</label>
-          <input id="userPhrase" type="text">
+          <input id="userPhrase" type="text" class="form-control">
           <br>
           <label for="oldWord">Enter word to be replaced:</label>
-          <input id="oldWord" type="text">
+          <input id="oldWord" type="text" class="form-control">
           <br>
           <label for="newWord">Enter the NEW word</label>
-          <input id="newWord" type="text">
+          <input id="newWord" type="text" class="form-control">
         </div>
         <button type="submit" class="btn">Find and replace</button>
       </form>
+      <br>
+
         <div id="result">
-          <span class='result'></span>
+          <span id='result'></span>
         </div>
   </body>
 </html>
