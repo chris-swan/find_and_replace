@@ -1,23 +1,18 @@
+var wordToFind = function(userPhrase, oldWord, newWord) {
 
-//Use replace 
-var ReplaceWord = function(userPhrase, oldWord, newWord) {
-  var newPhrase = userPhrase.replace(oldWord, newWord);
-  return newPhrase;
-};
+   var result = userPhrase.replace(oldWord, newWord);
+   return result;
+}
 
 $(document).ready(function() {
-  $("form#ReplaceWord").submit(function(event) {
+  $("form#wordToFind").submit(function(event) {
+    var user_phrase_form = String($("input#userPhrase").val());
+    var user_old_word_form = String($("input#oldWord").val());
+    var user_new_word_form = String($("input#newWord").val());
+    var result = wordToFind(user_phrase_form, user_old_word_form, user_new_word_form);
 
-    //user variables from from:
-    var user_phrase = String($("input#userPhrase").val());
-    var old_word = String($("input#oldWord").val());
-    var new_word = String($("input#newWord").val());
+    $(".result").text(result);
 
-    //new display
-    var result = ReplaceWord(userPhrase, oldWord, newWord);
-
-    //Show results:
-    $("#result").text(result);
     event.preventDefault();
 
   });
