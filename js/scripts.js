@@ -1,6 +1,10 @@
 var wordToFind = function(userPhrase, oldWord, newWord) {
 
+
+  //Make phrase lower case:
   var lowerCasePhrase = userPhrase.toLowerCase();
+
+  //function to replace old words in phrase with new, while also making lower case to ensure all words are caught:
   var result = lowerCasePhrase.replace(oldWord.toLowerCase(), newWord.toLowerCase());
   return result;
 }
