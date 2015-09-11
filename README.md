@@ -11,11 +11,12 @@ _This app takes a phrase and a word to replace within the phrase, then replaces 
 ## Setup
 
 - clone in desktop
-- open pig-latin.html in web browser
+- open specs.js in browser to view tests
+- open index.html in web browser to view sites
 
 ## Technologies Used
 
-created using HTML & JavaScript
+created using HTML, CSS & JavaScript
 
 ### Legal
 
