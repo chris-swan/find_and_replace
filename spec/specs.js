@@ -4,6 +4,6 @@ describe('wordToFind', function() {
   });
 
   it("replaces a single word from a string of multiple words", function() {
-    expect(wordToFind("where is the duck","duck", "chicken")).to.equal("chicken");
+    expect(wordToFind("where is the duck","where", "here")).to.equal("here is the duck");
   });
 });
