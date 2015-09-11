@@ -1,7 +1,8 @@
 var wordToFind = function(userPhrase, oldWord, newWord) {
 
-   var result = userPhrase.replace(oldWord, newWord);
-   return result;
+  var lowerCasePhrase = userPhrase.toLowerCase();
+  var result = lowerCasePhrase.replace(oldWord.toLowerCase(), newWord.toLowerCase());
+  return result;
 }
 
 $(document).ready(function() {
