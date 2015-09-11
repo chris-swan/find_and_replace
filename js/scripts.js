@@ -3,39 +3,26 @@ var wordToFind = function(userPhrase, oldWord, newWord) {
   var words = userPhrase.split(" ");
   var newWords = [];
   words.forEach(function(words) {
-    if (words == oldWord){
+    if (words == oldWord) {
       var replacedWords = words.replace(oldWord, newWord)
       newWords.push(newWord);
     }
   });
-
-  return newWords.join(" ");
+  var result = newWords.join(" ");
+  // return newWords.join(" ");
+  return result;
 }
-//
-// $(document).ready(function() {
-//   $("form#find_and_replace").submit(function(event) {
-//     var user_input_form = String($("input#user_phrase").val());
-//     var result = findWord(user_input_form);
-//
-//     $(".result").text(result);
-//
-//     event.preventDefault();
-//
-//   });
-// });
 
+$(document).ready(function() {
+  $("form#wordToFind").submit(function(event) {
+    var user_phrase_form = String($("input#userPhrase").val());
+    var user_old_word_form = String($("input#oldWord").val());
+    var user_new_word_form = String($("input#newWord").val());
+    var result = wordToFind(user_phrase_form, user_old_word_form, user_new_word_form);
 
-// var words = userInput.split(" ");
-// var ReplacedWords = [];
-// words.forEach(function(word) {
-//   var wordStatic = word.slice();
-//   for each word in words
-//     if
-//     } else {
-//       word = word.slice(1) + word[0];
-//     }
-//   }
-//   translatedWords.push(newWord);
-// });
-//
-// return ReplacedWords.join(" ");
+    $(".result").text(result);
+
+    event.preventDefault();
+
+  });
+});
