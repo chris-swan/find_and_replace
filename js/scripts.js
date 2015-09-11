@@ -1,21 +1,12 @@
 var wordToFind = function(userPhrase, oldWord, newWord) {
 
   var words = userPhrase.split(" ");
-  debugger;
   var newWords = [];
   words.forEach(function(words) {
-    //var wordStatic = word.slice();
-    var replacedWords = words.replace(oldWord, newWord)
-    // while (!isVowel(word[0])) {
-    //   if (word.slice(0,2) === "qu") {
-    //     word = word.slice(2) + word.slice(0,2);
-    //   } else if (wordStatic[0] !== "y" && word[0] === "y"){
-    //     break;
-    //   } else {
-    //     word = word.slice(1) + word[0];
-    //   }
-    // }
-    newWords.push(newWord);
+    if (words == oldWord){
+      var replacedWords = words.replace(oldWord, newWord)
+      newWords.push(newWord);
+    }
   });
 
   return newWords.join(" ");
