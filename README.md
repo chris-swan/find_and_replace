@@ -12,7 +12,7 @@ _This app takes a phrase and a word to replace within the phrase, then replaces 
 
 - clone in desktop
 - open specs.js in browser to view tests
-- open index.html in web browser to view sites
+- open index.html in web browser to use and view site
 
 ## Technologies Used
 
